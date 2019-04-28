@@ -1,5 +1,5 @@
 {
-  "name": "Amazin",
+  "name": "amazin",
   "description": "Creates links to local Amazon instances by GeoIP lookup",
   "version": "0.0.1",
   "scripts": {
@@ -10,13 +10,19 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "update": "cd node_modules/geoip-lite && npm run-script updatedb"
+    "deploy": "now --public && now alias && now remove amazin --safe --yes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donovanh/amazin"
+  },
+  "now": {
+    "alias": "amazin"
   },
   "dependencies": {
     "compression": "^1.7.1",
-    "eslint-config-prettier": "^4.2.0",
-    "eslint-plugin-prettier": "^3.0.1",
     "geoip-lite": "^1.3.7",
+    "maxmind": "^2.12.0",
     "polka": "^0.5.0",
     "request-ip": "^2.1.3",
     "sirv": "^0.2.0"

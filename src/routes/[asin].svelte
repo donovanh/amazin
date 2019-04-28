@@ -5,10 +5,10 @@
 	  // Check with locale.js to see if location supplied
 	  // If so, redirect on serverside
 	  const res = await this.fetch(`geo/lookup.json`)
-	  const result = await res.json()
+	  const iso_code = await res.json()
 	  const { asin } = params
 	  if (res.status === 200) {
-	    return { ...result, asin }
+	    return { ...iso_code, asin }
 	  } else {
 	    this.error(res.status, data.message)
 	  }
@@ -16,7 +16,7 @@
 </script>
 
 <script>
-	export let result;
+	export let iso_code;
 	export let asin;
 
 	const countries = {
@@ -42,13 +42,12 @@
 
 	// TODO: query params
 	// TODO: also tests, pleast tests
-	const { country } = result;
 	let url;
 
-	if (country) {
-		switch(country) {
+	if (iso_code) {
+		switch(iso_code) {
 			case 'UK': 
-			//case 'IE':
+			case 'IE':
 				url = generateURL('UK');
 			break;
 			case 'DE':
