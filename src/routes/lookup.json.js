@@ -11,5 +11,5 @@ export async function get(req, res) {
     'Content-Type': 'application/json'
   })
 
-  res.end(JSON.stringify({ iso_code, ip }))
+  res.end(JSON.stringify({ iso_code }))
 }
