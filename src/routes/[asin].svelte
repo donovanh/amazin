@@ -3,14 +3,13 @@
 	  // If no asin supplied, redirect to index
 
 	  // Check with locale.js to see if location supplied
-	  // If so, redirect on serverside
-	  const res = await this.fetch(`geo/lookup.json`)
+	  const res = await this.fetch('lookup.json')
 	  const iso_code = await res.json()
 	  const { asin } = params
 	  if (res.status === 200) {
 	    return { ...iso_code, asin }
 	  } else {
-	    this.error(res.status, data.message)
+	    this.error(res.status)
 	  }
 	}
 </script>
@@ -18,7 +17,7 @@
 <script>
 	export let iso_code;
 	export let asin;
-
+	
 	const countries = {
 		UK: { name: 'United Kingdom', url: 'https://amazon.co.uk' },
 		DE: { name: 'Germany', url: 'https://amazon.de' },
@@ -68,6 +67,6 @@
 	{#if url}
 		<p>Redirecting to: <a href="{url}">{url}</a></p>
 	{:else}
-		<p>Choose your closest Amazon</p>
+		<p>Choose an Amazon</p>
 	{/if}
 </div>
