@@ -10,7 +10,8 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "deploy": "now --public && now alias && now remove amazin --safe --yes"
+    "deploy:staging": "now --target staging",
+    "deploy:prod": "now --target production"
   },
   "repository": {
     "type": "git",

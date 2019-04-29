@@ -1,6 +1,6 @@
 <style>
 	h1,
-	figure,
+	section,
 	p {
 	  text-align: center;
 	  margin: 0 auto;
@@ -17,3 +17,8 @@
 	<p>Text input: pase amazon URL here to generate your amazin url</p>
 	<p>Link to <code>amazin.now.sh/[ASIN]</code></p>
 </section>
+
+<footer>
+	<p class="license">This product includes GeoLite2 data created by MaxMind, available from
+<a href="https://www.maxmind.com">https://www.maxmind.com</a>.</p>
+</footer>
