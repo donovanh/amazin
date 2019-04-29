@@ -10,15 +10,12 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "deploy:staging": "now --target staging",
-    "deploy:prod": "now --target production"
+    "deploy:staging": "npm run build && now --public --target staging",
+    "deploy:prod": "npm run build && now --public --target production"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/donovanh/amazin"
-  },
-  "now": {
-    "alias": "amazin"
   },
   "dependencies": {
     "compression": "^1.7.1",
