@@ -12,7 +12,7 @@
     "test:integration": "run-p --race dev cy:run",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "deploy": "npm run build && now --public && now alias"
+    "deploy": "npm run build && now --target production"
   },
   "jest": {
     "testMatch": [
