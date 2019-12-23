@@ -18,5 +18,5 @@ const app = express()
 			if (err) console.log('error', err)
 		});
 	}
-	
+
   export default app;
