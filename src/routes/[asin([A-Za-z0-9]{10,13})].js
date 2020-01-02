@@ -4,7 +4,6 @@ import fetch from 'node-fetch'
 export async function get(req, res) {
   const ip = req.headers['x-forwarded-for']
   const key = process.env.GEO_KEY
-  console.log('KEY: ', key)
   const APIUrl = `https://api.ipgeolocation.io/ipgeo?apiKey=${key}&ip=${ip}`
   let iso_code
 
