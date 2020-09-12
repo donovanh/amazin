@@ -15,7 +15,7 @@
     "compression": "^1.7.4",
     "copy-to-clipboard": "^3.2.0",
     "express": "^4.17.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "sapper-environment": "^1.0.1",
     "sirv": "^0.4.2",
     "universal-analytics": "^0.4.20"
